@@ -1,0 +1,6 @@
+<h1>Results1 Page</h1>
+<% data["Search"].forEach(function(movie){ %>
+    <li> <%= movie["Title"] %> - <%= movie["Year"] %> - <%= movie["imdbID"] %> - <%= movie["Type"]%> - <%= movie.imdbRating%></li>
+     <img src="<%= movie["Poster"] %>"</li>
+<% }); %> 
+<a href="/"><button>Search Again!!!</a></button>

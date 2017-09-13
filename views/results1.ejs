@@ -1,0 +1,24 @@
+<% include ./partials/header %>
+<div class="container">
+    <h1 class="text-center">Description About <%= data["Title"] %></h1>
+     <% for (x in data) { %>
+            <% if (x === "Poster") { %>
+                <img class="img-responsive center-block" src="<%= data[x] %>"></li>
+            <% } %>
+        <% } %>
+    <ul class="list-group">
+        <% data["Ratings"].forEach(function(movie){ %>
+            <li class="list-group-item"><%= movie["Value"] %></li>
+        <% }); %> 
+        <% for (x in data) { %>
+            <% if (x !== "Poster") { %>
+                <li class="list-group-item"><%= x %> - <%= data[x] %></li>
+            <% } else { %>
+                <% continue %>
+            <% } %>
+        <% } %>
+    </ul>
+    <!--<li><%= data["Title"] %> - <%= data["Year"] %> - <%= data["imdbRating"] %> - <%= data["Type"] %></li>-->
+    <a href="/"><button type="button" class="btn btn-lg btn-primary center-block">Search Again!!!</button>
+</div>
+<% include ./partials/footer %>

@@ -1,0 +1,15 @@
+<% include ./partials/header %>
+
+<% include ./partials/footer %>
+<div class="ui main text container segment">
+    <div class="ui huge header">Search For a movie</div>
+    <form class="ui form" action="/results1" method="GET">
+        <div class="field">
+            <label>Title</label>
+             <input type="text" placeholder="search movie" name="search">
+        </div>
+        <input class="ui violet big basic button" type="submit">
+    </form>
+</div>
+
+<% include ./partials/footer %>
